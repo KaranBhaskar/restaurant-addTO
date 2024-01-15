@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Karan's Restaurant</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Karan's Fine dining</h1>
+        <h2>The Best Restaurant in the World</h2>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <div id="menuItems"></div>
+        <div id="orders"></div>
+        <div id="page-mask" class="none"></div>
+        <div id="completeOrder" class="none">
+            <form class="model" id="form">
+                <h2 class="center">Enter card details</h2>
+                <input
+                id="name"
+                required
+                type="text"
+                placeholder="Enter your name"
+                aria-label="Enter your name"
+                name="name"
+                />
+                <input
+                required
+                type="tel"
+                inputmode="numeric"
+                pattern="[0-9\s]{13,19}"
+                autocomplete="cc-number"
+                maxlength="19"
+                placeholder="Enter card number"
+                name="card"
+                />
+                <input required id="field" type="number" max="999" pattern="([0-9]|[0-9]|[0-9])" name="cvv" placeholder="Enter CVV"/>
+                <button id="completeOrder-btn" class="complete-btn"type="submit">Pay</button>
+            </div>
+        </form>
+      </div>
+    </section>
+    <script type="module" src="index.js"></script>
+    <!-- <script type="module" src="data.js"></script> -->
+  </body>
+</html>
